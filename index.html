@@ -1,39 +1,216 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Siri</title>
+export default function SiriPortfolio() {
+  const skills = [
+    "需求分析",
+    "AI工具应用",
+    "用户洞察",
+    "B2B业务逻辑",
+    "流程优化",
+    "数据分析",
+    "跨团队协作",
+    "商业研究",
+  ];
 
-<style>
-body{
-background:black;
-color:white;
-font-family:Arial;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-flex-direction:column;
+  const experiences = [
+    {
+      title: "机械外贸业务员",
+      company: "杭州隆姆贸易公司",
+      time: "2026.01 - 2026.05",
+      desc: "独立完成客户开发、需求分析、方案匹配与订单交付。5个月完成4单，销售额2.5万美元。",
+    },
+    {
+      title: "战略咨询实习生",
+      company: "华信设计咨询研究院 × 久谦咨询",
+      time: "2025.08 - 2025.12",
+      desc: "负责行业调研、知识库搭建、流程优化与数据分析，输出多份行业研究报告。",
+    },
+    {
+      title: "实验室采购助理",
+      company: "重庆工商大学",
+      time: "2022.09 - 2022.11",
+      desc: "搭建供应商评估体系与数据库，完成300+供应商数据结构化处理。",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center px-6">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-cyan-900/20" />
+
+        <div className="relative z-10 max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block px-4 py-2 rounded-full border border-white/20 text-sm mb-6 backdrop-blur">
+              Product Manager Candidate · AI Explorer
+            </div>
+
+            <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-6">
+              王诗睿
+              <span className="block text-cyan-400">Siri</span>
+            </h1>
+
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              爱探险的朵拉。
+              <br />
+              喜欢挑战自我，也喜欢把复杂问题拆解清楚。
+              <br />
+              正在从“外贸 + 商业研究 + AI工具应用”走向产品经理。
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="px-6 py-3 bg-cyan-400 text-black rounded-2xl font-semibold hover:scale-105 transition">
+                Contact Me
+              </button>
+
+              <button className="px-6 py-3 border border-white/20 rounded-2xl backdrop-blur hover:bg-white/10 transition">
+                View Resume
+              </button>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-cyan-400/20 blur-3xl rounded-full" />
+
+            <div className="relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[32px] p-8 shadow-2xl">
+              <div className="space-y-5">
+                <div>
+                  <div className="text-gray-400 text-sm mb-1">Current Goal</div>
+                  <div className="text-2xl font-semibold">AI Product Manager</div>
+                </div>
+
+                <div>
+                  <div className="text-gray-400 text-sm mb-1">Background</div>
+                  <div className="text-lg">
+                    Applied Chemistry × International Business
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-gray-400 text-sm mb-1">Strength</div>
+                  <div className="text-lg">
+                    从混乱信息中建立逻辑与流程
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-gray-400 text-sm mb-1">Tools</div>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {[
+                      "ChatGPT",
+                      "DeepSeek",
+                      "Excel",
+                      "ERP",
+                      "PS",
+                      "Canva",
+                    ].map((tool) => (
+                      <span
+                        key={tool}
+                        className="px-3 py-1 rounded-full bg-white/10 text-sm"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-400 text-lg max-w-3xl leading-relaxed">
+            我擅长快速进入陌生领域，并把复杂、模糊的问题拆解成可以落地执行的路径。
+            从实验室采购、战略咨询到机械外贸，我逐渐发现：
+            自己真正喜欢的事情，是站在用户与业务之间，寻找更好的解决方案。
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-semibold mb-6">核心能力</h3>
+
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <div
+                  key={skill}
+                  className="px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+            <h3 className="text-2xl font-semibold mb-6">我适合产品经理的原因</h3>
+
+            <ul className="space-y-4 text-gray-300 leading-relaxed">
+              <li>• 能从用户模糊表达中提炼真实需求</li>
+              <li>• 擅长建立流程与知识库</li>
+              <li>• 具备商业理解与跨团队协作能力</li>
+              <li>• 对AI工具保持高频学习与实践</li>
+              <li>• 能快速学习陌生行业并输出结构化方案</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-4">Experience Timeline</h2>
+          <p className="text-gray-400 text-lg">
+            从商业、数据、咨询到销售，我一直在积累“理解用户与业务”的能力。
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-cyan-400/40 transition"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 className="text-2xl font-semibold">{exp.title}</h3>
+                  <p className="text-cyan-300">{exp.company}</p>
+                </div>
+
+                <div className="text-gray-400">{exp.time}</div>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed">{exp.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-24">
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 rounded-[40px] p-10 md:p-16 text-center">
+          <h2 className="text-5xl font-bold mb-6">
+            我想成为一名产品经理
+          </h2>
+
+          <p className="text-gray-300 text-xl leading-relaxed max-w-3xl mx-auto mb-10">
+            希望未来能够参与 AI 产品、效率工具、商业平台或用户增长方向的产品工作。
+            我希望做的产品，不只是“功能”，而是真正能解决问题、提升体验的东西。
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="px-5 py-3 bg-white/10 rounded-2xl">AI Product</div>
+            <div className="px-5 py-3 bg-white/10 rounded-2xl">B2B SaaS</div>
+            <div className="px-5 py-3 bg-white/10 rounded-2xl">User Experience</div>
+            <div className="px-5 py-3 bg-white/10 rounded-2xl">Growth</div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 py-12 px-6 text-center text-gray-400">
+        <div className="text-xl font-semibold text-white mb-3">王诗睿 · Siri</div>
+        <div className="mb-2">Email: wshr1104@163.com</div>
+        <div className="mb-2">WeChat: wshr1104</div>
+        <div>“Stay curious. Keep exploring.”</div>
+      </footer>
+    </div>
+  );
 }
-
-h1{
-font-size:72px;
-color:#22d3ee;
-margin:0;
-}
-
-p{
-font-size:24px;
-color:#d1d5db;
-}
-</style>
-
-</head>
-
-<body>
-
-<h1>王诗睿 · Siri</h1>
-
-<p>AI Product Manager Explorer</p>
-
-</body>
-</html>
